@@ -15,10 +15,10 @@ public class EnemyController : MonoBehaviour
     [Range(0, 360)]
     public float visionRange;
     public float radius;
-
-
+    
     public bool isAttacking;
     public bool hasLineOfSight;
+    private bool intrudersSoundPlayed = false;
 
     public Animator enemyAnimator;
 
@@ -33,11 +33,18 @@ public class EnemyController : MonoBehaviour
 
     public Quaternion angle;
 
+    public AudioSource enemyAudio;
+    public AudioClip[] stepsSound;
+    public AudioClip[] runStepSound;
+    public AudioClip intrudersSound;
+
+
     // Start is called before the first frame update
     void Start()
     {
         enemyAnimator = GetComponent<Animator>();
         target = GameObject.Find("CyberpunkChar_8");
+        enemyAudio = GetComponent<AudioSource>();
         StartCoroutine(FOVRoutine());
     }
 
@@ -56,7 +63,7 @@ public class EnemyController : MonoBehaviour
     {
         EnemyBehavior();
 
-        Debug.Log(hasLineOfSight);
+
     }
 
     public void FieldOfViewCheck()
@@ -74,22 +81,34 @@ public class EnemyController : MonoBehaviour
 
                 if (!Physics.Raycast(transform.position, directionToTarget, distanceToTarget, obstacleMask))
                 {
-                    hasLineOfSight = true;
+                    if (!hasLineOfSight)
+                    {
+                        hasLineOfSight = true;
+
+                        if (!intrudersSoundPlayed)
+                        {
+                            PlayIntruderSound();
+                            intrudersSoundPlayed = true;
+                        }
+                    }   
                 }
                 else
                 {
                     hasLineOfSight = false;
+                    intrudersSoundPlayed = false;
                 }
             }
             else
             {
                 hasLineOfSight = false;
+                intrudersSoundPlayed = false;
             }
 
         }
         else if (hasLineOfSight)
         {
             hasLineOfSight = false;
+            intrudersSoundPlayed = false;
         }
     }
 
@@ -124,6 +143,8 @@ public class EnemyController : MonoBehaviour
                     transform.rotation = Quaternion.RotateTowards(transform.rotation, angle, 0.5f);
                     transform.Translate(Vector3.forward * walkSpeed * Time.deltaTime);
                     enemyAnimator.SetBool("walk", true);
+
+                    
                     break;
             }
         }
@@ -148,12 +169,51 @@ public class EnemyController : MonoBehaviour
                 enemyAnimator.SetBool("run", false);
             }
         }
-        
+
         if (isAttacking)
         {
             agent.enabled = false;
         }
 
+    }
+
+    public void FootSteptsEvent()
+    {
+        PlayFootstepSound();
+    }
+    public void RunSteptsEvent()
+    {
+        PlayRunStepSound();
+    }
+
+    void PlayFootstepSound()
+    {
+        // Check if footstepSounds array is not empty
+        if (stepsSound.Length > 0 && enemyAudio != null)
+        {
+            // Randomly select a footstep sound from the array
+            AudioClip footstepSound = stepsSound[Random.Range(0, stepsSound.Length)];
+            // Play the selected footstep sound
+            enemyAudio.PlayOneShot(footstepSound);
+        }
+    }
+    void PlayIntruderSound()
+    {
+        if (intrudersSound != null && enemyAudio != null)
+        {
+            enemyAudio.PlayOneShot(intrudersSound);
+        }
+    }
+    void PlayRunStepSound()
+    {
+        // Check if footstepSounds array is not empty
+        if (runStepSound.Length > 0 && enemyAudio != null)
+        {
+            // Randomly select a footstep sound from the array
+            AudioClip runSound = runStepSound[Random.Range(0, runStepSound.Length)];
+            // Play the selected footstep sound
+            enemyAudio.PlayOneShot(runSound);
+        }
     }
 
     public void EndAttackAnimation()
@@ -167,5 +227,6 @@ public class EnemyController : MonoBehaviour
         range.GetComponent<CapsuleCollider>().enabled = true;
 
     }
+
 }
 
