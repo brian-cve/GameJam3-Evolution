@@ -57,7 +57,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: cda4173c1bf66ad47bbd93be25ece0c4, type: 2}
     - target: {fileID: 919132149155446097, guid: 56cdd2306ad1a9c49a7ff3ce208d7404, type: 3}
       propertyPath: m_Name
-      value: Gun-4 Variant
+      value: Gun-4
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 56cdd2306ad1a9c49a7ff3ce208d7404, type: 3}
       propertyPath: m_Layer
@@ -112,3 +112,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 15
+  isTargeted: 0
