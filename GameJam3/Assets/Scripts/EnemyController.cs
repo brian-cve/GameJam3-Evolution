@@ -37,7 +37,7 @@ public class EnemyController : MonoBehaviour
     void Start()
     {
         enemyAnimator = GetComponent<Animator>();
-        target = GameObject.Find("Player");
+        target = GameObject.Find("CyberpunkChar_8");
         StartCoroutine(FOVRoutine());
     }
 

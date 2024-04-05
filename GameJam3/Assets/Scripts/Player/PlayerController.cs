@@ -18,4 +18,12 @@ public class PlayerController : MonoBehaviour
         input.OnMovementDirectionInput -= movement.HandleMovementDirection;
         input.OnMovementInput -= movement.HandleMovement;
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            print("Player Die");
+        }
+    }
 }

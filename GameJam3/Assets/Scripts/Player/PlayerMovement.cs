@@ -53,7 +53,6 @@ public class PlayerMovement : MonoBehaviour
 
     private float SetAnimation() {
         float currentAnimationSpeed = animator.GetFloat("Move");
-        Debug.Log(desiredRotationAngle);
         if (IsAbleToRotate()) {
             if (currentAnimationSpeed < 0.2f) {
                 currentAnimationSpeed += Time.deltaTime * 2;
