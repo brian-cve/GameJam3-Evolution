@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1314826296
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1314826297}
+  m_Layer: 6
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1314826297
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1314826296}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4281015431061391273}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4387493016335336060
 GameObject:
   m_ObjectHideFlags: 0
@@ -25,7 +56,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4387493016335336060}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.5839195, y: 1.0866164, z: -6.6545706}
+  m_LocalPosition: {x: 6.5839233, y: 1.0866165, z: -6.6545715}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -290,7 +321,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4387493017010574436}
-  m_LocalRotation: {x: 0.14958344, y: -0.000000008506397, z: 0.0000000012868947, w: 0.98874915}
+  m_LocalRotation: {x: 0.14958346, y: 0.000000017012798, z: -0.00000000257379, w: 0.98874915}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -655,7 +686,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4387493017684165313}
-  m_LocalRotation: {x: 0.14521317, y: 0.000000012213686, z: -0.0000000017925883, w: 0.98940045}
+  m_LocalRotation: {x: 0.14521317, y: -0, z: -0, w: 0.98940045}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -733,7 +764,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4387493017858757526}
-  m_LocalRotation: {x: 0.142565, y: -0, z: -0, w: 0.9897855}
+  m_LocalRotation: {x: 0.142565, y: 0.000000008515311, z: -0.0000000012265137, w: 0.9897855}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -923,6 +954,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cade5830394c99640a977a6729b869d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  picbkableLayerMask:
+    serializedVersion: 2
+    m_Bits: 512
+  pickUpUI: {fileID: 0}
+  playerPickeableTransform: {fileID: 1314826297}
 --- !u!114 &4387493017098211023
 MonoBehaviour:
   m_ObjectHideFlags: 0
