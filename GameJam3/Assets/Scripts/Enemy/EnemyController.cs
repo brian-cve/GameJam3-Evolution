@@ -35,7 +35,7 @@ public class EnemyController : MonoBehaviour
     public AudioSource enemyAudio;
     public AudioClip[] stepsSound;
     public AudioClip[] runStepSound;
-    public AudioClip intrudersSound;
+    public AudioClip[]intrudersSound;
 
 
     // Start is called before the first frame update
@@ -200,7 +200,7 @@ public class EnemyController : MonoBehaviour
     {
         if (intrudersSound != null && enemyAudio != null)
         {
-            enemyAudio.PlayOneShot(intrudersSound);
+            enemyAudio.PlayOneShot(intrudersSound[Random.Range(0,intrudersSound.Length)]);
         }
     }
     void PlayRunStepSound()

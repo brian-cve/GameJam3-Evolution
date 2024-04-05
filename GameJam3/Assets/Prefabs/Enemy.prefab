@@ -504,10 +504,14 @@ MonoBehaviour:
   angle: {x: 0, y: 0, z: 0, w: 0}
   enemyAudio: {fileID: 0}
   stepsSound:
-  - {fileID: 8300000, guid: ff43a41fe6d74544192462ba75ca97f8, type: 3}
+  - {fileID: 8300000, guid: bef3eca9ba952ac44bd2c725f02875e0, type: 3}
+  - {fileID: 8300000, guid: cdc61d9e29f23ca4daf2ddb96fc38658, type: 3}
   runStepSound:
-  - {fileID: 8300000, guid: d705c394f0847854f9e20255b8b90b43, type: 3}
-  intrudersSound: {fileID: 8300000, guid: abf655531d26d314682b175bacd9b5e0, type: 3}
+  - {fileID: 8300000, guid: bef3eca9ba952ac44bd2c725f02875e0, type: 3}
+  - {fileID: 8300000, guid: cdc61d9e29f23ca4daf2ddb96fc38658, type: 3}
+  intrudersSound:
+  - {fileID: 8300000, guid: 8de01af7f60489744a981862057158af, type: 3}
+  - {fileID: 8300000, guid: abf655531d26d314682b175bacd9b5e0, type: 3}
 --- !u!195 &7705502976894355789
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -549,9 +553,9 @@ AudioSource:
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  DopplerLevel: 5
+  MinDistance: 4.1041856
+  MaxDistance: 17.223677
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -586,7 +590,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
