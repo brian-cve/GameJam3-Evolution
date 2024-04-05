@@ -6,8 +6,14 @@ public class ObjectRotation : MonoBehaviour
 {
     [SerializeField]
     private float rotationSpeed = 15f;
+    public bool isTargeted = false;
 
     void Update() {
-        transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
+        if (!isTargeted)
+            transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
+    }
+
+    public void setIsTargeted(bool newState) {
+        this.isTargeted = newState;
     }
 }
