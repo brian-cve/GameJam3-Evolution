@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class UIMainMenu : MonoBehaviour
 {
+    [SerializeField] private AudioClip startSound;
     // Start is called before the first frame update
     public void StartLevel(string NameLevel)
     {
@@ -12,8 +13,8 @@ public class UIMainMenu : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void buttonSfx()
     {
-
+        AudioManager1.Instance.PlaySound(startSound);
     }
 }

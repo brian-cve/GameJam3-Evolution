@@ -206,7 +206,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7708067}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1117368985}
+        m_TargetAssemblyTypeName: EnlacesItchIO, Assembly-CSharp
+        m_MethodName: itchioLink
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: https://danieltolo1.itch.io/
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7708067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2092,7 +2104,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 809373169}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1117368985}
+        m_TargetAssemblyTypeName: EnlacesItchIO, Assembly-CSharp
+        m_MethodName: itchioLink
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: https://ibowa.itch.io/
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &809373169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2521,7 +2545,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 876086468}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1117368985}
+        m_TargetAssemblyTypeName: EnlacesItchIO, Assembly-CSharp
+        m_MethodName: itchioLink
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: https://carlos4rias.itch.io/
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &876086468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3467,6 +3503,7 @@ GameObject:
   - component: {fileID: 1117368981}
   - component: {fileID: 1117368980}
   - component: {fileID: 1117368984}
+  - component: {fileID: 1117368985}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -3573,6 +3610,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d0bf7fac1f13bc45a4ae2f92188ee71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1117368985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117368979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f95fc56bfc12179468021022a18e5b48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1145462567 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1071012509893646920, guid: fdca8753340ce954fbb0d7a4dd9e72fb, type: 3}
@@ -3661,7 +3710,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1163980474}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1117368985}
+        m_TargetAssemblyTypeName: EnlacesItchIO, Assembly-CSharp
+        m_MethodName: itchioLink
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: https://soybri.itch.io/
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1163980474
 MonoBehaviour:
   m_ObjectHideFlags: 0
