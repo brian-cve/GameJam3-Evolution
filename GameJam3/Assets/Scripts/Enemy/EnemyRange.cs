@@ -6,6 +6,7 @@ public class EnemyRange : MonoBehaviour
 {
     public Animator animator;
     public EnemyController enemy;
+    public Canvas gameOverCanvas;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,11 +26,13 @@ public class EnemyRange : MonoBehaviour
             animator.SetBool("run", false);
             animator.SetBool("attack", true);
             enemy.isAttacking = true;
+            gameOverCanvas.gameObject.SetActive(true);
             if(enemy.intrudersSoundPlayed == true)
             {
                 enemy.enemyAudio.PlayOneShot(enemy.humanNeutralizedSound);
             }
             GetComponent<CapsuleCollider>().enabled = false;
+            Time.timeScale = 0;
         }
     }
 }

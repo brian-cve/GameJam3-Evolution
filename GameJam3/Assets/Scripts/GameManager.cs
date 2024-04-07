@@ -5,8 +5,10 @@ using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
+    
 {
     public static GameManager Instance {get; set;}
+    public Canvas winCanvasGame;
     int keysToFind; 
     int foundKeys;
 
@@ -27,6 +29,11 @@ public class GameManager : MonoBehaviour
     public void foundKey() {
         foundKeys++;
         UpdateFoundKeysScore();
+        if (foundKeys == keysToFind)
+        {
+            winCanvasGame.gameObject.SetActive(true);
+            Time.timeScale = 0;
+        }
     }
 
 
