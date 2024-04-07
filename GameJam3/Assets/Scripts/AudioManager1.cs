@@ -18,7 +18,7 @@ public class AudioManager1 : MonoBehaviour
         else
         {
             Instance = this;
-            DontDestroyOnLoad(this);
+
         }
     }
 
