@@ -25,6 +25,10 @@ public class EnemyRange : MonoBehaviour
             animator.SetBool("run", false);
             animator.SetBool("attack", true);
             enemy.isAttacking = true;
+            if(enemy.intrudersSoundPlayed == true)
+            {
+                enemy.enemyAudio.PlayOneShot(enemy.humanNeutralizedSound);
+            }
             GetComponent<CapsuleCollider>().enabled = false;
         }
     }
