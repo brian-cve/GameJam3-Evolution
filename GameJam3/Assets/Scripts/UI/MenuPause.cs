@@ -43,6 +43,7 @@ public class MenuPause : MonoBehaviour
         Time.timeScale = 1;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        AudioManager1.Instance.PlaySound(startSound);
     }
 
 
