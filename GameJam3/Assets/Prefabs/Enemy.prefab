@@ -376,7 +376,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4327782174577988399}
   - component: {fileID: 7705502976894355797}
-  - component: {fileID: 7705502976894355794}
   - component: {fileID: 7705502976894355795}
   - component: {fileID: 7705502976894355790}
   - component: {fileID: 4289088792284918982}
@@ -429,22 +428,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!54 &7705502976894355794
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3982464487000983957}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 116
-  m_CollisionDetection: 0
 --- !u!65 &7705502976894355795
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -487,11 +470,12 @@ MonoBehaviour:
   timer: 0
   degree: 0
   walkSpeed: 3
-  attackDistance: 0.0128757
-  visionRange: 80
-  radius: 10
+  attackDistance: 0.1
+  visionRange: 270
+  radius: 12
   isAttacking: 0
   hasLineOfSight: 0
+  intrudersSoundPlayed: 0
   enemyAnimator: {fileID: 0}
   target: {fileID: 0}
   range: {fileID: 4289088792101199607}
@@ -513,6 +497,7 @@ MonoBehaviour:
   intrudersSound:
   - {fileID: 8300000, guid: 8de01af7f60489744a981862057158af, type: 3}
   - {fileID: 8300000, guid: abf655531d26d314682b175bacd9b5e0, type: 3}
+  humanNeutralizedSound: {fileID: 8300000, guid: 567b1d56d15f0de4dbc71219641c59af, type: 3}
 --- !u!195 &7705502976894355789
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -522,17 +507,17 @@ NavMeshAgent:
   m_GameObject: {fileID: 3982464487000983957}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.05
-  m_Speed: 5
-  m_Acceleration: 8
+  m_Radius: 0.03
+  m_Speed: 4.5
+  m_Acceleration: 15
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 1
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 0.045
-  m_BaseOffset: 0
+  m_BaseOffset: 0.001
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!82 &3585393351061648751
@@ -547,7 +532,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -555,8 +540,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 5
-  MinDistance: 4.1041856
-  MaxDistance: 17.223677
+  MinDistance: 2.9664664
+  MaxDistance: 4.4446597
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0

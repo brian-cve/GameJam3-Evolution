@@ -17,7 +17,7 @@ public class EnemyController : MonoBehaviour
     
     public bool isAttacking;
     public bool hasLineOfSight;
-    private bool intrudersSoundPlayed = false;
+    public bool intrudersSoundPlayed = false;
 
     public Animator enemyAnimator;
 
@@ -35,7 +35,8 @@ public class EnemyController : MonoBehaviour
     public AudioSource enemyAudio;
     public AudioClip[] stepsSound;
     public AudioClip[] runStepSound;
-    public AudioClip[]intrudersSound;
+    public AudioClip[] intrudersSound;
+    public AudioClip humanNeutralizedSound;
 
 
     // Start is called before the first frame update
@@ -171,7 +172,8 @@ public class EnemyController : MonoBehaviour
 
         if (isAttacking)
         {
-            agent.enabled = false;
+            agent.enabled = true;
+            
         }
 
     }
