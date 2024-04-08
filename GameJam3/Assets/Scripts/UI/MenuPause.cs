@@ -53,6 +53,7 @@ public class MenuPause : MonoBehaviour
         SceneManager.LoadScene(nameMenu);
         AudioManager1.Instance.PlaySound(startSound);
 
+
     }
 
 

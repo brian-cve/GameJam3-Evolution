@@ -7,7 +7,7 @@ public class PlayerInput : MonoBehaviour, IInput
     public Action<Vector2> OnMovementInput { get; set; }
 
     private void Start() {
-        
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void Update() {

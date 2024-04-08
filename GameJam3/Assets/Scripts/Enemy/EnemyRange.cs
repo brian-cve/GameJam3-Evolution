@@ -33,6 +33,7 @@ public class EnemyRange : MonoBehaviour
             }
             GetComponent<CapsuleCollider>().enabled = false;
             Time.timeScale = 0;
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 }
