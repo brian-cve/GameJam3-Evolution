@@ -7,13 +7,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1043701357, guid: 6c638a238ed845348950987dfdba5874, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1175823413012461812, guid: 6c638a238ed845348950987dfdba5874, type: 3}
       propertyPath: m_Name
-      value: Gun-4 Variant
+      value: PlayerGun
       objectReference: {fileID: 0}
     - target: {fileID: 1953028997390639694, guid: 6c638a238ed845348950987dfdba5874, type: 3}
       propertyPath: m_RootOrder
@@ -59,7 +55,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1043701356, guid: 6c638a238ed845348950987dfdba5874, type: 3}
-    - {fileID: 1043701357, guid: 6c638a238ed845348950987dfdba5874, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c638a238ed845348950987dfdba5874, type: 3}
+--- !u!1 &7206886365324090939 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1175823413012461812, guid: 6c638a238ed845348950987dfdba5874, type: 3}
+  m_PrefabInstance: {fileID: 8382709486238721743}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &2638393042496777119
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7206886365324090939}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6393719541145401748, guid: 56cdd2306ad1a9c49a7ff3ce208d7404, type: 3}

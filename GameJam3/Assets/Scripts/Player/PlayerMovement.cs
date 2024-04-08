@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace Carlos {
+    
 public class PlayerMovement : MonoBehaviour
 {
     CharacterController controller;
@@ -70,4 +72,6 @@ public class PlayerMovement : MonoBehaviour
 
         return currentAnimationSpeed;
     }
+}
+
 }

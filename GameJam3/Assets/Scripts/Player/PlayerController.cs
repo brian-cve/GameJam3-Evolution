@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     IInput input;
-    PlayerMovement movement;
+    Carlos.PlayerMovement movement;
     [SerializeField] private LayerMask picbkableLayerMask;
     [SerializeField] private GameObject pickUpUI;
     [SerializeField] private Transform playerPickeableTransform;
@@ -15,7 +13,7 @@ public class PlayerController : MonoBehaviour
 
     private  void OnEnable() {
         input = GetComponent<IInput>();
-        movement = GetComponent<PlayerMovement>();
+        movement = GetComponent<Carlos.PlayerMovement>();
         input.OnMovementDirectionInput += movement.HandleMovementDirection;
         input.OnMovementInput += movement.HandleMovement;
     }
